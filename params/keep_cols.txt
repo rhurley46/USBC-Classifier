@@ -1,0 +1,50 @@
+features = [
+    "age", #likely useful
+    "class of worker", #likely useful
+    "education", #likely useful
+    "marital stat", #likely useful
+    "major industry code", #likely useful
+    "major occupation code", #likely useful
+    "race", #likely useful
+    "sex", #likely useful
+    "capital gains",
+    "capital losses",
+    "dividends from stocks",
+    "country of birth self",
+    "citizenship",
+    "own business or self employed",
+    "weeks worked in year",
+    "wage per hour",
+    "income"]
+
+maybe_feats = [
+    "detailed industry recode", #need to know more
+    "detailed occupation recode", #need to know more
+    "wage per hour", #likely too correlated
+    "full or part time employment stat", #need to know more
+    "tax filer stat",
+    "detailed household and family stat", #unsure
+    "detailed household summary in household", #unsure
+    "migration code-change in msa",
+    "migration code-change in reg",
+    "migration code-move within reg",
+    "live in this house 1 year ago",
+    "migration prev res in sunbelt",
+    "country of birth father",
+    "country of birth mother",
+]
+
+likely_not = [
+    "enroll in edu inst last wk", #Not in universe
+    "hispanic origin", 
+    "member of a labor union",
+    "reason for unemployment",
+    "region of previous residence",
+    "state of previous residence", #Not in universe
+    "num persons worked for employer",
+    "family members under 18", #Not in universe
+    "fill inc questionnaire for veteran's admin",
+    "veterans benefits",
+    "year"
+    "income"
+]

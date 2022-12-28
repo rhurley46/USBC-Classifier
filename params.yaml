@@ -1,0 +1,128 @@
+base:
+  random_state: 42
+  log_level: INFO
+
+
+raw_data:
+  train: 'data/raw/census_income_learn.csv'
+  test: 'data/raw/census_income_test.csv'
+
+preprocessed_data:
+  train: 'data/preprocessed/preprocessed_train.csv'
+  test: 'data/preprocessed/preprocessed_test.csv'
+
+featurised_data:
+  train: 'data/featurised/featurised_train.csv'
+  test: 'data/featurised/featurised_test.csv'
+
+models:
+  model: 'models/xgboost_model.pkl'
+
+keep_features: [
+    "age",
+    "class of worker",
+    "education",
+    "marital stat",
+    "major industry code",
+    "major occupation code",
+    "race",
+    "sex",
+    "capital gains",
+    "capital losses",
+    "dividends from stocks",
+    "country of birth self",
+    "citizenship",
+    "own business or self employed",
+    "weeks worked in year",
+    "wage per hour",
+    "income"]
+
+col_names: [
+  age,
+  class of worker,
+  detailed industry recode,
+  detailed occupation recode,
+  education,
+  wage per hour,
+  enroll in edu inst last wk,
+  marital stat,
+  major industry code,
+  major occupation code,
+  race,
+  hispanic origin,
+  sex,
+  member of a labor union,
+  reason for unemployment,
+  full or part time employment stat,
+  capital gains,
+  capital losses,
+  dividends from stocks,
+  tax filer stat,
+  region of previous residence,
+  state of previous residence,
+  detailed household and family stat,
+  detailed household summary in household,
+  instance weight,
+  migration code-change in msa,
+  migration code-change in reg,
+  migration code-move within reg,
+  live in this house 1 year ago,
+  migration prev res in sunbelt,
+  num persons worked for employer,
+  family members under 18,
+  country of birth father,
+  country of birth mother,
+  country of birth self,
+  citizenship,
+  own business or self employed,
+  fill inc questionnaire for veteran's admin,
+  veterans benefits,
+  weeks worked in year,
+  year,
+  income]
+
+col_types : {"age": "continuous",
+"class of worker": "nominal",
+"detailed industry recode": "nominal",
+"detailed occupation recode": "nominal",
+"education": "nominal",
+"wage per hour": "continuous",
+"enroll in edu inst last wk": "nominal",
+"marital stat": "nominal",
+"major industry code": "nominal",
+"major occupation code": "nominal",
+"race": "nominal",
+"hispanic origin": "nominal",
+"sex": "nominal",
+"member of a labor union": "nominal",
+"reason for unemployment": "nominal",
+"full or part time employment stat": "nominal",
+"capital gains": "continuous",
+"capital losses": "continuous",
+"dividends from stocks": "continuous",
+"tax filer stat": "nominal",
+"region of previous residence": "nominal",
+"state of previous residence": "nominal",
+"detailed household and family stat": "nominal",
+"detailed household summary in household": "nominal",
+"migration code-change in msa": "nominal",
+"migration code-change in reg": "nominal",
+"migration code-move within reg": "nominal",
+"live in this house 1 year ago": "nominal",
+"migration prev res in sunbelt": "nominal",
+"num persons worked for employer": "continuous",
+"family members under 18": "nominal",
+"country of birth father": "nominal",
+"country of birth mother": "nominal",
+"country of birth self": "nominal",
+"citizenship": "nominal",
+"own business or self employed": "nominal",
+"fill inc questionnaire for veteran's admin": "nominal",
+"veterans benefits": "nominal",
+"weeks worked in year": "continuous",
+"year": "nominal",
+"income": "nominal"}
+
+
+
+
