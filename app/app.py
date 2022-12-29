@@ -12,7 +12,7 @@ for i in category_cols:
 
 option = st.selectbox(
     "class of worker",
-    coldict["class of worker"])
+    ["a", "b", "c"])
     # ('Email', 'Home phone', 'Mobile phone'))
 
 st.write('You selected:', option)
