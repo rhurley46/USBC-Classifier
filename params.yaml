@@ -18,6 +18,17 @@ featurised_data:
 models:
   model: 'models/xgboost_model.pkl'
 
+pipeline:
+  tuned_pipeline: 'pipelines/tuned_pipeline.pkl'
+
+outputs:
+  plots: 'outputs/figs/'
+
+hyperparams:
+  learning_rate: [0.1]
+  n_estimators: [100]
+  max_depth: [3]
+
 keep_features: [
     "age",
     "class of worker",

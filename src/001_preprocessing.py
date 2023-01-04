@@ -60,26 +60,13 @@ def preprocess(config_path: Text) -> None:
     train = train[~train_dupes]
     test = test[~test_dupes]
 
-    print(train.head())
-
     # convert income to binary
     train['income']=train['income'].map({' - 50000.': '< $50k', ' 50000+.': '> $50k'})
     test['income']=test['income'].map({' - 50000.': '< $50k', ' 50000+.': '> $50k'})
 
-    # check nas and proportions
-    isna_df = pd.DataFrame(
-        {"train_nas": train.isna().sum(), 
-        "test_nas": test.isna().sum(),
-        "prop_train_na": (train.isna().sum().values ) / len(train) * 100,
-        "prop_test_na": (test.isna().sum().values ) / len(test) * 100 
-        })
-    isna_df = isna_df[(isna_df['train_nas'] > 0) | (isna_df['test_nas'] > 0)]
-
-    isna_df_cols = list(isna_df.index)
-    # Impute Nan
-    for col in isna_df_cols:
-        distribution_impute(train, col)
-        distribution_impute(test, col)
+    keep_cols = config['keep_features']
+    train = train[keep_cols]
+    test = test[keep_cols]
 
     # save preprocessed data
     train.to_csv(config['preprocessed_data']['train'], index=None)
