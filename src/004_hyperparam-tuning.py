@@ -43,7 +43,7 @@ def tuning(config_path: Text) -> None:
     results = list()
 
     steps = [
-        ('c', OneHotEncoder(handle_unknown='ignore'), cat_ix),
+        ('c', OneHotEncoder(handle_unknown='ignore', sparse_output=False), cat_ix),
         ('n', MinMaxScaler(), num_ix)
     ]
     ct = ColumnTransformer(steps)
